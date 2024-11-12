@@ -34,7 +34,8 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects">Projetos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#signup">Contatos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#signup">Cadastro</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contat">Contatos</a></li>
                 </ul>
             </div>
         </div>
@@ -135,56 +136,39 @@
                 <div class="col-md-10 col-lg-8 mx-auto text-center">
                     <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
                     <h2 class="text-white mb-5">Se increva para mais atualizações</h2>
-                    <!-- * * * * * * * * * * * * * * *-->
-                    <!-- * * SB Forms Contact Form * *-->
-                    <!-- * * * * * * * * * * * * * * *-->
-                    <!-- This form is pre-integrated with SB Forms.-->
-                    <!-- To make this form functional, sign up at-->
-                    <!-- https://startbootstrap.com/solution/contact-forms-->
-                    <!-- to get an API token!-->
-                    <form class="form-signup" id="contactForm" data-sb-form-api-token="API_TOKEN">
+                    
+                    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                        <!-- Nome input -->
+                        <div class="mb-3">
+                            <input class="form-control" id="name" type="text" placeholder="Digite seu nome" required data-sb-validations="required" />
+                            <div class="invalid-feedback" data-sb-feedback="name:required">Por favor, informe seu nome.</div>
+                        </div>
                         <!-- Email address input-->
-                        <div class="row input-group-newsletter">
-                            <div class="col"><input class="form-control" id="emailAddress" type="email"
-                                    placeholder=" Digite seu e-mail" aria-label="Enter email address..."
-                                    data-sb-validations="required,email" /></div>
-                            <div class="col-auto"><button class="btn btn-primary disabled" id="submitButton"
-                                    type="submit">Notifique-me</button></div>
+                        <div class="mb-3">
+                            <input class="form-control" id="emailAddress" type="email" placeholder="Digite seu e-mail" required data-sb-validations="required,email" />
+                            <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Por favor, informe seu e-mail.</div>
+                            <div class="invalid-feedback" data-sb-feedback="emailAddress:email">E-mail não é válido.</div>
                         </div>
-                        <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:required">Registre seu e-mail.
+                        <!-- Mensagem input-->
+                        <div class="mb-3">
+                            <textarea class="form-control" id="message" placeholder="Digite sua mensagem" required data-sb-validations="required"></textarea>
+                            <div class="invalid-feedback" data-sb-feedback="message:required">Por favor, escreva sua mensagem.</div>
                         </div>
-                        <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:email">E-mail não é válido
-                        </div>
-                        <!-- Submit success message-->
-                        <!---->
-                        <!-- This is what your users will see when the form-->
-                        <!-- has successfully submitted-->
-                        <div class="d-none" id="submitSuccessMessage">
-                            <div class="text-center mb-3 mt-2 text-white">
-                                <div class="fw-bolder">E-mail cadastrado com sucesso </div>
-
-                                <br />
-                                <a
-                                    href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                            </div>
-                        </div>
-                        <!-- Submit error message-->
-                        <!---->
-                        <!-- This is what your users will see when there is-->
-                        <!-- an error submitting the form-->
-                        <div class="d-none" id="submitErrorMessage">
-                            <div class="text-center text-danger mb-3 mt-2">Error sending message!</div>
+                        <!-- Botão de envio-->
+                        <div class="d-grid">
+                            <button class="btn btn-primary" id="submitButton" type="submit">Enviar Mensagem</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </section>
+    </section>
     <!-- Contact-->
-    <section class="contact-section bg-black">
+    <section class="contact-section bg-black" id="contat">
         <div class="container px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5">
-                <div class="col-md-4 mb-3 mb-md-0">
+                <div class="col-md-3 mb-3 mb-md-0">
                     <div class="card py-4 h-100">
                         <div class="card-body text-center">
                             <i class="fas fa-map-marked-alt text-primary mb-2"></i>
@@ -196,23 +180,33 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-3 mb-md-0">
+                <div class="col-md-3 mb-3 mb-md-0">
                     <div class="card py-4 h-100">
                         <div class="card-body text-center">
                             <i class="fas fa-envelope text-primary mb-2"></i>
                             <h4 class="text-uppercase m-0">Email</h4>
                             <hr class="my-4 mx-auto" />
-                            <div class="small text-black-50"><a href="#!">franciscoalvescabral22@gmail.com</a></div>
+                            <div class="small text-black-50"><a href="#!">Universalstartupconnection@gmail.com</a></div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-3 mb-md-0">
+                <div class="col-md-3 mb-3 mb-md-0">
                     <div class="card py-4 h-100">
                         <div class="card-body text-center">
                             <i class="fas fa-mobile-alt text-primary mb-2"></i>
                             <h4 class="text-uppercase m-0">Telefone</h4>
                             <hr class="my-4 mx-auto" />
-                            <div class="small text-black-50">(98) 988776734</div>
+                            <div class="small text-black-50">(61) 3356-9000</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3 mb-md-0">
+                    <div class="card py-4 h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-link text-primary mb-2"></i>
+                            <h4 class="text-uppercase m-0">Protótipo</h4>
+                            <hr class="my-4 mx-auto" />
+                            <div class="small text-black-50"><a href="https://www.figma.com/design/XD3tr5Qnqw2QYJbVnvf4Kd/LinkedIn-Redesign-UI-Kit-(Community)?node-id=0-1&t=5e6lQrLxESdcc5E1-1" target="_blank">Acessar Protótipo</a></div>
                         </div>
                     </div>
                 </div>
@@ -224,6 +218,7 @@
             </div>
         </div>
     </section>
+    
     <!-- Footer-->
     <footer class="footer bg-black small text-center text-white-50">
         <div class="container px-4 px-lg-5">SUC Conexão Universal de Stargtups &copy; Nosso Website 2024</div>
